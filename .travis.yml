@@ -1,1 +1,5 @@
 language: python
+services:
+- docker
+script:
+- docker build --pull . -t "${TRAVIS_REPO_SLUG}:latest"
